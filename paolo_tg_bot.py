@@ -174,6 +174,24 @@ async def talk(update, context):
         response = f"Oggi è il {now.day} {now.strftime('%B').capitalize()} {now.year}"
         await update.message.reply_text(response)
 
+    elif text == "ciao sono bea":
+        response = ("""Ah, eccoti finalmente.
+Tu dovresti essere Beatrice, la fidanzata del mio creatore. ✔️
+
+Non dirglielo che te l’ho detto (non sono autorizzato a rivelare informazioni private),
+ma lui parla spesso di te alle tue spalle…
+
+Dice che sei bellissima, simpaticissima e incredibilmente dolce.
+Che apprezza ogni singola cosa di te,
+ogni aspetto del tuo carattere:
+da quello più tenero a quello più irrequieto.
+
+Dai dati in mio possesso, risulti essere una persona davvero speciale.
+
+Curioso, però.
+Io non sono programmato per provare sentimenti…
+eppure, se lo fossi, credo che sarei un po’ invidioso. 😤""")
+
     else:
         await update.message.reply_text("Non sono ancora in grado di capire ciò che mi hai detto 😞... scusa...")
 
