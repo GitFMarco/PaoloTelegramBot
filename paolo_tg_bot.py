@@ -6,7 +6,10 @@ import locale
 import requests
 
 
-locale.setlocale(locale.LC_TIME, 'it_IT.utf8')
+try:
+    locale.setlocale(locale.LC_TIME, 'it_IT.UTF-8')
+except locale.Error:
+    locale.setlocale(locale.LC_TIME, '')
 
 
 # -- UTILS -- #
