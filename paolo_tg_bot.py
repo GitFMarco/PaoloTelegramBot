@@ -159,7 +159,7 @@ async def upcoming(update, context):
 async def talk(update, context):
     text = update.message.text.lower()
 
-    if any(word in text for word in ["ciao", "buongiorno", "buon pomeriggio", "buonasera", "buonanotte"]):
+    if any(word in text for word in ["ciao", "buongiorno", "buon pomeriggio", "buonasera", "buonanotte"]) and "bea" not in text:
         greeting = get_greeting_by_daytime()
         response = f"{greeting} {update.message.from_user.first_name}! Come posso esserti utile?"
         await update.message.reply_text(response)
@@ -191,6 +191,7 @@ Dai dati in mio possesso, risulti essere una persona davvero speciale.
 Curioso, però.
 Io non sono programmato per provare sentimenti…
 eppure, se lo fossi, credo che sarei un po’ invidioso. 😤""")
+        await update.message.reply_text(response)
 
     else:
         await update.message.reply_text("Non sono ancora in grado di capire ciò che mi hai detto 😞... scusa...")
