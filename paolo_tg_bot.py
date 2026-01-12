@@ -176,7 +176,7 @@ async def talk(update, context):
 
     elif text == "ciao sono bea":
         response = ("""Ah, eccoti finalmente.
-Tu dovresti essere Beatrice, la fidanzata del mio creatore. ✔️
+Tu dovresti essere Beatrice, la fidanzata del mio creatore.
 
 Non dirglielo che te l’ho detto (non sono autorizzato a rivelare informazioni private),
 ma lui parla spesso di te alle tue spalle…
